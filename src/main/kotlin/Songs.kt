@@ -5,7 +5,6 @@ class Song(val title: String, val artist: String){
 
     fun stop(){
         println("Stopped playing $title")
-        val a  = 0
     }
 }
 
