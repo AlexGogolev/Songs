@@ -18,6 +18,7 @@ class Song(val title: String, val artist: String, btr: Int){
         get() = btr_ / 2
 
     var btr_3 = btr
+        get() = field
         set(value){
             if (value > 200) field = value
         }
