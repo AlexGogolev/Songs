@@ -13,6 +13,15 @@ class Song(val title: String, val artist: String, btr: Int){
         println("Song $title has been created")
         abc = "some text"
     }
+
+    val btr_2: Int
+        get() = btr_ / 2
+
+    var btr_3 = btr
+        set(value){
+            if (value > 200) field = value
+        }
+
 }
 
 fun main(){
@@ -23,6 +32,11 @@ fun main(){
     songTwo.play()
     songTwo.stop()
     songThree.play()
-    println(songOne.btr_)
-    println(songOne.abc)
+    println("***************")
+    println("btr_ = $songOne.btr_")
+    println("before btr_3 = ${songOne.btr_3}")
+    songOne.btr_3 = 210
+    println("after btr_3 = ${songOne.btr_3}")
+
+
 }
