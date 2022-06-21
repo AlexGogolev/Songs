@@ -18,9 +18,10 @@ class Song(val title: String, val artist: String, btr: Int){
         get() = btr_ / 2
 
     var btr_3 = btr
-        get() = field
+        get() = field // тут btr_3 будет == btr
         set(value){
             if (value > 200) field = value
+            else{field = 0}
         }
 
 }
@@ -36,7 +37,7 @@ fun main(){
     println("***************")
     println("btr_ = $songOne.btr_")
     println("before btr_3 = ${songOne.btr_3}")
-    songOne.btr_3 = 210
+    songOne.btr_3 = 100
     println("after btr_3 = ${songOne.btr_3}")
 
 
